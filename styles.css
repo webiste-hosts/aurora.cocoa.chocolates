@@ -314,12 +314,14 @@ h2 {
 
 .menu-item-card li span:first-child {
   color: #e9ddcf;
+  min-width: 0;
 }
 
 .menu-item-card li span:last-child {
   color: var(--gold-soft);
   font-weight: 700;
   letter-spacing: 0.02em;
+  white-space: nowrap;
 }
 
 .menu-gallery {
@@ -563,14 +565,29 @@ h2 {
     display: none;
   }
 
+  .site-header {
+    top: 10px;
+  }
+
   .hero {
     grid-template-columns: 1fr;
     min-height: auto;
-    padding-top: 42px;
+    padding-top: 34px;
+    gap: 26px;
+  }
+
+  .hero-content {
+    max-width: 700px;
+  }
+
+  .hero-content p {
+    max-width: 100%;
   }
 
   .hero-logo-card {
     max-width: 520px;
+    width: 100%;
+    margin: 0 auto;
   }
 
   .menu-board {
@@ -584,7 +601,20 @@ h2 {
 
 @media (max-width: 720px) {
   .section {
-    padding: 76px 0;
+    padding: 62px 0;
+  }
+
+  .section-heading {
+    margin-bottom: 22px;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 10vw, 2.7rem);
+    max-width: 12ch;
+  }
+
+  h2 {
+    font-size: clamp(1.8rem, 8.8vw, 2.35rem);
   }
 
   .menu-board,
@@ -594,11 +624,81 @@ h2 {
   }
 
   .site-header {
-    border-radius: 16px;
+    border-radius: 14px;
     width: 94vw;
+    padding: 9px 12px;
+  }
+
+  .brand img {
+    width: 38px;
+    height: 38px;
   }
 
   .brand span {
-    font-size: 0.9rem;
+    font-size: 0.84rem;
+  }
+
+  .hero-actions {
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .menu-item-card {
+    border-radius: 16px;
+    padding: 14px;
+  }
+
+  .menu-item-card h3 {
+    font-size: 1.45rem;
+  }
+
+  .menu-item-card li {
+    font-size: 0.96rem;
+    gap: 8px;
+  }
+
+  .price-card {
+    padding: 24px;
+  }
+
+  .price-card h3 {
+    font-size: 2rem;
+  }
+
+  .craft-step {
+    padding: 18px;
+  }
+
+  .contact-section {
+    padding: 56px 16px;
+    border-radius: 20px;
+  }
+
+  .btn-lg {
+    width: 100%;
+    max-width: 360px;
+  }
+}
+
+@media (max-width: 420px) {
+  .section {
+    width: 94vw;
+  }
+
+  .menu-item-card li {
+    flex-wrap: wrap;
+  }
+
+  .menu-item-card li span:last-child {
+    width: 100%;
+    text-align: left;
+    padding-top: 2px;
+  }
+
+  .cocoa-rain {
+    display: none;
   }
 }
